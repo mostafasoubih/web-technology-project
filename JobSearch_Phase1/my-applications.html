@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Applications | JobSearch</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar container">
+      <a href="index.html" class="navbar__brand">JobSearch</a>
+      <input type="checkbox" id="nav-toggle" class="sr-only">
+      <label for="nav-toggle" class="navbar__toggle" aria-label="Menu">&#9776;</label>
+      <ul class="navbar__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Browse Jobs</a></li>
+        <li><a href="my-applications.html" aria-current="page">My Applications</a></li>
+        <li><span class="chip">Ahmed Ali</span></li>
+        <li><a href="index.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>My Applications</h1>
+      <p class="text-muted">Track the status of the jobs you have applied for.</p>
+    </div>
+
+    <section class="section">
+      <div class="grid-2">
+        
+        <article class="card">
+          <h3>Frontend Developer</h3>
+          <p class="text-muted">TechNova • Applied on: Nov 1, 2026</p>
+          <span style="display: inline-block; margin-top: 0.5rem; padding: 0.2rem 0.5rem; background: #e6f4ea; color: #137333; border-radius: 4px; font-size: 0.85rem;">Status: Under Review</span>
+          <div style="margin-top: 1rem;">
+            <a href="job-details.html" class="btn btn-outline btn-sm">View Job</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Backend Developer</h3>
+          <p class="text-muted">CodeBridge • Applied on: Oct 28, 2026</p>
+          <span style="display: inline-block; margin-top: 0.5rem; padding: 0.2rem 0.5rem; background: #fef7e0; color: #b06000; border-radius: 4px; font-size: 0.85rem;">Status: Pending</span>
+          <div style="margin-top: 1rem;">
+            <a href="job-details.html" class="btn btn-outline btn-sm">View Job</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <div>
+        <a href="index.html" class="navbar__brand">JobSearch</a>
+        <p class="text-muted">IS231 Web Technology</p>
+      </div>
+      <ul class="footer__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Browse Jobs</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+        <li><a href="cover.html">Cover Page</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
