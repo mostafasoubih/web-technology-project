@@ -14,7 +14,7 @@
         <li><a href="admin-dashboard.html">My Job Postings</a></li>
         <li><a href="job-form.html" class="active">Add Job</a></li>
         <li><span class="user-tag">TechNova (Admin)</span></li>
-        <li><a href="index.html" class="btn btn-outline btn-sm">Logout</a></li>
+        <li><a href="index.html">Logout</a></li>
       </ul>
     </nav>
   </header>
@@ -27,19 +27,12 @@
 
     <section class="section">
       <div class="card card-narrow">
-        <p class="form-note">Fields marked <span class="required">*</span> are required.</p>
+        <p class="text-muted">Fields marked <span class="required">*</span> are required.</p>
 
         <form action="admin-dashboard.html" method="get">
-          <div class="form-row">
-            <div class="form-group">
-              <span class="field-label">Job ID</span>
-              <div class="form-readonly">Auto-generated</div>
-            </div>
-
-            <div class="form-group">
-              <span class="field-label">Company</span>
-              <div class="form-readonly">TechNova</div>
-            </div>
+          <div class="info-box">
+            <p><strong>Job ID:</strong> Assigned automatically</p>
+            <p><strong>Company:</strong> TechNova (signed-in company)</p>
           </div>
 
           <div class="form-group">
@@ -47,7 +40,7 @@
             <input type="text" id="job-title" name="title" placeholder="e.g. Frontend Developer" required>
           </div>
 
-          <div class="form-row">
+          <div class="grid-2">
             <div class="form-group">
               <label for="job-salary">Salary (EGP/month) <span class="required">*</span></label>
               <input type="number" id="job-salary" name="salary" min="0" placeholder="e.g. 18000" required>
