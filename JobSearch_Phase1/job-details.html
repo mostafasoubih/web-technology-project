@@ -9,66 +9,76 @@
 <body>
   <header>
     <nav class="navbar container">
-      <a href="index.html" class="navbar__brand">JobSearch</a>
-      <input type="checkbox" id="nav-toggle" class="sr-only">
-      <label for="nav-toggle" class="navbar__toggle" aria-label="Menu">&#9776;</label>
-      <ul class="navbar__links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="jobs.html">Browse Jobs</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a></li>
+      <a href="index.html" class="brand">JobSearch</a>
+      <ul class="nav-links">
+        <li><a href="jobs.html" class="active">Browse Jobs</a></li>
+        <li><a href="my-applications.html">My Applications</a></li>
+        <li><span class="user-tag">Ahmed Ali</span></li>
+        <li><a href="index.html" class="btn btn-outline btn-sm">Logout</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="container">
     <div class="page-header">
-      <h1>Frontend Developer</h1>
-      <p class="text-muted">TechNova • Posted 2 days ago</p>
+      <h1>Job Details</h1>
+      <p class="text-muted">Read the full job information below before submitting your application.</p>
     </div>
 
     <section class="section">
-      <div class="card">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+      <article class="card">
+        <div class="job-header">
           <div>
-            <span class="badge" style="background: #e6f4ea; color: #137333; padding: 0.3rem 0.6rem; border-radius: 4px;">Status: Open</span>
+            <span class="job-id">Job #101</span>
+            <h2>Frontend Developer</h2>
+            <p class="text-muted">TechNova</p>
           </div>
-          <div>
-            <strong>18,000 EGP / month</strong>
-          </div>
+          <span class="badge badge-open">Open</span>
         </div>
 
-        <h3 style="margin-bottom: 0.5rem;">Job Description</h3>
-        <p class="text-muted" style="margin-bottom: 1.5rem;">
-          We are looking for a passionate Frontend Developer to build responsive web pages using HTML, CSS, and JavaScript. You will work closely with the design and product teams to deliver exceptional user interfaces.
-        </p>
+        <dl class="details-grid">
+          <div>
+            <dt>Job ID</dt>
+            <dd>#101</dd>
+          </div>
+          <div>
+            <dt>Company</dt>
+            <dd>TechNova</dd>
+          </div>
+          <div>
+            <dt>Salary</dt>
+            <dd>18,000 EGP/month</dd>
+          </div>
+          <div>
+            <dt>Required Experience</dt>
+            <dd>2 years</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Open</dd>
+          </div>
+        </dl>
 
-        <h3 style="margin-bottom: 0.5rem;">Requirements</h3>
-        <ul style="margin-bottom: 2rem; padding-left: 1.5rem;" class="text-muted">
-          <li>At least 2 years of proven experience in web development.</li>
-          <li>Strong proficiency in HTML5, CSS3, and modern layouts.</li>
-          <li>Good understanding of responsive design principles.</li>
-        </ul>
+        <h3>Job Description</h3>
+        <p class="text-muted">Build responsive web pages using semantic HTML and modern CSS for client portals. Work closely with backend developers and designers to deliver clean, user-friendly interfaces across desktop and mobile screens.</p>
 
-        <div>
-          <a href="my-applications.html" class="btn btn-primary">Apply for this Job</a>
-          <a href="jobs.html" class="btn btn-outline" style="margin-left: 0.5rem;">Back to Jobs</a>
-        </div>
-      </div>
+        <form action="my-applications.html" method="get" class="actions">
+          <button type="submit" class="btn btn-primary">Apply for this Job</button>
+          <a href="jobs.html" class="btn btn-outline">Back to Jobs</a>
+        </form>
+      </article>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer__content">
+  <footer>
+    <div class="container">
       <div>
-        <a href="index.html" class="navbar__brand">JobSearch</a>
-        <p class="text-muted">IS231 Web Technology</p>
+        <a href="index.html" class="brand">JobSearch</a>
+        <p class="text-muted">IS231 Web Technology - Phase 1 (Project 4)</p>
       </div>
-      <ul class="footer__links">
+      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="jobs.html">Browse Jobs</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Sign Up</a></li>
         <li><a href="cover.html">Cover Page</a></li>
       </ul>
     </div>

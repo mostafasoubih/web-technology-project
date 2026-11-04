@@ -1,14 +1,17 @@
 # Web Technology Project (IS231) - Phase 1
 
 ## Project 4: Job Search
-Faculty of Computing and Artificial Intelligence - Cairo University (FCAI-CU)
+Faculty of Computing and Artificial Intelligence - Cairo University (FCAI-CU) - Group 14
 
-### Folder Structure
-- `JobSearch_Phase1/`: Contains the front-end code (HTML, CSS, snippets).
-  - `index.html`: Home page
-  - `page-template.html`: Base page template
-  - `css/`: Stylesheets (`style.css`, `pages/home.css`)
-  - `_snippets/`: Navigation and footer snippets
-- `IS231-Web_Technology_Phase1 (1).pdf`: Official project assignment requirements
-- `Project4_JobSearch_Task_Plan.pdf`: Team task breakdown and timeline
-- `SHALABINO_GUIDE.md`: Project guide and documentation
+### Project Structure (`JobSearch_Phase1/`)
+- `index.html`: Home / landing page
+- `signup.html`: Sign-up page (Job Seeker / Company Admin + Company Name)
+- `login.html`: Login page with prototype role selector
+- `jobs.html`: Browse & search page (Job Title + Years of Experience filters, Open first, Closed disabled, No-results state)
+- `job-details.html`: Job details page for an Open job (`#101`) with Apply action
+- `job-details-closed.html`: Job details page for a Closed job (`#105`) with disabled Apply button
+- `my-applications.html`: My Applications page (`Applied` result state + Empty state)
+- `admin-dashboard.html`: Company Admin dashboard (Postings owned by TechNova + Empty state)
+- `job-form.html`: Add / Edit Job form
+- `cover.html`: Project cover page
+- `css/style.css`: Shared external stylesheet

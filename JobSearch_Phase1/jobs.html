@@ -9,14 +9,12 @@
 <body>
   <header>
     <nav class="navbar container">
-      <a href="index.html" class="navbar__brand">JobSearch</a>
-      <input type="checkbox" id="nav-toggle" class="sr-only">
-      <label for="nav-toggle" class="navbar__toggle" aria-label="Menu">&#9776;</label>
-      <ul class="navbar__links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="jobs.html" aria-current="page">Browse Jobs</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a></li>
+      <a href="index.html" class="brand">JobSearch</a>
+      <ul class="nav-links">
+        <li><a href="jobs.html" class="active">Browse Jobs</a></li>
+        <li><a href="my-applications.html">My Applications</a></li>
+        <li><span class="user-tag">Ahmed Ali</span></li>
+        <li><a href="index.html" class="btn btn-outline btn-sm">Logout</a></li>
       </ul>
     </nav>
   </header>
@@ -24,57 +22,159 @@
   <main class="container">
     <div class="page-header">
       <h1>Browse Jobs</h1>
-      <p class="text-muted">Search and filter open job postings.</p>
+      <p class="text-muted">Use the filters below to search available openings by job title or years of experience.</p>
     </div>
 
+    <!-- Search Filters -->
     <section class="section">
       <div class="card">
         <form action="jobs.html" method="get">
-          <div class="form-group" style="margin-bottom: 1rem;">
-            <label for="title" class="form-label">Job Title</label>
-            <input type="text" id="title" name="title" class="form-control" placeholder="e.g. Developer">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="filter-title">Job Title</label>
+              <input type="text" id="filter-title" name="title" placeholder="e.g. Frontend Developer">
+            </div>
+
+            <div class="form-group">
+              <label for="filter-exp">Years of Experience (Max)</label>
+              <input type="number" id="filter-exp" name="experience" min="0" max="30" placeholder="e.g. 2">
+            </div>
           </div>
-          <button type="submit" class="btn btn-primary">Search</button>
+
+          <div class="actions">
+            <button type="submit" class="btn btn-primary">Search Jobs</button>
+            <button type="reset" class="btn btn-outline">Reset</button>
+          </div>
         </form>
       </div>
     </section>
 
+    <!-- Job Listings -->
     <section class="section">
+      <div class="header-row">
+        <h2>Job Listings</h2>
+        <span class="text-muted">Showing 5 jobs (4 open, 1 closed)</span>
+      </div>
+
       <div class="grid-2">
-        
-        <article class="card">
-          <h3>Frontend Developer</h3>
-          <p class="text-muted">TechNova • 18,000 EGP</p>
-          <span style="color: green; font-weight: bold;">Status: Open</span>
-          <div style="margin-top: 1rem;">
-            <a href="job-details.html" class="btn btn-primary btn-sm">Apply</a>
+        <article class="card job-card">
+          <div class="job-header">
+            <div>
+              <span class="job-id">Job #101</span>
+              <h3>Frontend Developer</h3>
+            </div>
+            <span class="badge badge-open">Open</span>
+          </div>
+          <ul class="job-meta">
+            <li>TechNova</li>
+            <li>18,000 EGP/month</li>
+            <li>2 years exp.</li>
+          </ul>
+          <p class="text-muted">Build responsive web pages using semantic HTML and modern CSS for client portals.</p>
+          <div class="actions">
+            <a href="job-details.html" class="btn btn-primary btn-sm">View Details</a>
           </div>
         </article>
 
-        <article class="card">
-          <h3>UI/UX Designer</h3>
-          <p class="text-muted">PixelHub • 15,000 EGP</p>
-          <span style="color: red; font-weight: bold;">Status: Closed</span>
-          <div style="margin-top: 1rem;">
-            <span class="btn btn-sm" style="background: #ccc; cursor: not-allowed;">Closed</span>
+        <article class="card job-card">
+          <div class="job-header">
+            <div>
+              <span class="job-id">Job #102</span>
+              <h3>Backend Developer</h3>
+            </div>
+            <span class="badge badge-open">Open</span>
+          </div>
+          <ul class="job-meta">
+            <li>CodeBridge</li>
+            <li>22,000 EGP/month</li>
+            <li>3 years exp.</li>
+          </ul>
+          <p class="text-muted">Develop REST APIs, database queries, and server-side logic for web applications.</p>
+          <div class="actions">
+            <a href="job-details.html" class="btn btn-primary btn-sm">View Details</a>
           </div>
         </article>
 
+        <article class="card job-card">
+          <div class="job-header">
+            <div>
+              <span class="job-id">Job #103</span>
+              <h3>QA Engineer</h3>
+            </div>
+            <span class="badge badge-open">Open</span>
+          </div>
+          <ul class="job-meta">
+            <li>TechNova</li>
+            <li>14,000 EGP/month</li>
+            <li>1 year exp.</li>
+          </ul>
+          <p class="text-muted">Write test cases, run manual and automated web tests, and report defects clearly.</p>
+          <div class="actions">
+            <a href="job-details.html" class="btn btn-primary btn-sm">View Details</a>
+          </div>
+        </article>
+
+        <article class="card job-card">
+          <div class="job-header">
+            <div>
+              <span class="job-id">Job #104</span>
+              <h3>Data Analyst</h3>
+            </div>
+            <span class="badge badge-open">Open</span>
+          </div>
+          <ul class="job-meta">
+            <li>PixelHub</li>
+            <li>16,000 EGP/month</li>
+            <li>1 year exp.</li>
+          </ul>
+          <p class="text-muted">Prepare weekly business dashboards, clean datasets, and summarize product metrics.</p>
+          <div class="actions">
+            <a href="job-details.html" class="btn btn-primary btn-sm">View Details</a>
+          </div>
+        </article>
+
+        <article class="card job-card">
+          <div class="job-header">
+            <div>
+              <span class="job-id">Job #105</span>
+              <h3>Mobile App Developer</h3>
+            </div>
+            <span class="badge badge-closed">Closed</span>
+          </div>
+          <ul class="job-meta">
+            <li>TechNova</li>
+            <li>24,000 EGP/month</li>
+            <li>3 years exp.</li>
+          </ul>
+          <p class="text-muted">Maintain cross-platform mobile screens and integrate backend services.</p>
+          <div class="actions">
+            <a href="job-details-closed.html" class="btn btn-outline btn-sm">View Details</a>
+            <button type="button" class="btn btn-sm" disabled>Applications Closed</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- No Results State -->
+    <section class="section">
+      <h2>No Matching Results</h2>
+      <div class="empty-state">
+        <h3>No jobs match your search</h3>
+        <p>Try searching with another job title or adjusting the years of experience filter.</p>
+        <a href="jobs.html" class="btn btn-outline btn-sm">Clear Filters</a>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer__content">
+  <footer>
+    <div class="container">
       <div>
-        <a href="index.html" class="navbar__brand">JobSearch</a>
-        <p class="text-muted">IS231 Web Technology</p>
+        <a href="index.html" class="brand">JobSearch</a>
+        <p class="text-muted">IS231 Web Technology - Phase 1 (Project 4)</p>
       </div>
-      <ul class="footer__links">
+      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="jobs.html">Browse Jobs</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Sign Up</a></li>
         <li><a href="cover.html">Cover Page</a></li>
       </ul>
     </div>

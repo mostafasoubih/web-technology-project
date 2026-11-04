@@ -9,14 +9,12 @@
 <body>
   <header>
     <nav class="navbar container">
-      <a href="index.html" class="navbar__brand">JobSearch</a>
-      <input type="checkbox" id="nav-toggle" class="sr-only">
-      <label for="nav-toggle" class="navbar__toggle" aria-label="Menu">&#9776;</label>
-      <ul class="navbar__links">
+      <a href="index.html" class="brand">JobSearch</a>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="jobs.html">Browse Jobs</a></li>
         <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html" class="btn btn-primary btn-sm" aria-current="page">Sign Up</a></li>
+        <li><a href="signup.html" class="active">Sign Up</a></li>
       </ul>
     </nav>
   </header>
@@ -24,59 +22,68 @@
   <main class="container">
     <div class="page-header">
       <h1>Create an Account</h1>
-      <p class="text-muted">Join JobSearch to find jobs or post new career opportunities.</p>
+      <p class="text-muted">Sign up to search and apply for jobs, or register as a company admin to post openings.</p>
     </div>
 
     <section class="section">
-      <div class="card" style="max-width: 500px; margin: 0 auto;">
-        <form action="index.html" method="get">
-          
-          <div class="form-group" style="margin-bottom: 1rem;">
-            <label for="fullname" class="form-label">Full Name</label>
-            <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Ahmed Ali" required>
+      <div class="card card-narrow">
+        <p class="form-note">Fields marked <span class="required">*</span> are required.</p>
+
+        <form action="login.html" method="get">
+          <div class="form-group">
+            <label for="full-name">Full Name <span class="required">*</span></label>
+            <input type="text" id="full-name" name="fullname" placeholder="Enter your full name" required>
           </div>
 
-          <div class="form-group" style="margin-bottom: 1rem;">
-            <label for="email" class="form-label">Email Address</label>
-            <input type="email" id="email" name="email" class="form-control" placeholder="name@example.com" required>
+          <div class="form-group">
+            <label for="signup-email">Email Address <span class="required">*</span></label>
+            <input type="email" id="signup-email" name="email" placeholder="name@example.com" required>
           </div>
 
-          <div class="form-group" style="margin-bottom: 1rem;">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" id="password" name="password" class="form-control" placeholder="••••••••" required>
+          <div class="form-group">
+            <label for="signup-password">Password <span class="required">*</span></label>
+            <input type="password" id="signup-password" name="password" placeholder="At least 8 characters" minlength="8" required>
           </div>
 
-          <div class="form-group" style="margin-bottom: 1.5rem;">
-            <label for="role" class="form-label">Account Type</label>
-            <select id="role" name="role" class="form-control" required>
-              <option value="user">Job Seeker</option>
-              <option value="admin">Company Admin</option>
-            </select>
+          <fieldset class="form-group">
+            <legend>Account Type <span class="required">*</span></legend>
+            <div class="radio-options">
+              <label for="role-seeker">
+                <input type="radio" id="role-seeker" name="role" value="seeker" required>
+                Job Seeker
+              </label>
+              <label for="role-admin">
+                <input type="radio" id="role-admin" name="role" value="admin">
+                Company Admin
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-group">
+            <label for="company-name">Company Name</label>
+            <input type="text" id="company-name" name="company" placeholder="e.g. TechNova">
+            <small>Enter your company name if you are signing up as a Company Admin.</small>
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width: 100%;">Sign Up</button>
+          <button type="submit" class="btn btn-primary btn-block">Create Account</button>
         </form>
-        
-        <p class="text-muted" style="text-align: center; margin-top: 1rem;">
-          Already have an account? <a href="login.html">Log in</a>
-        </p>
+
+        <p class="form-footer">Already have an account? <a href="login.html">Log in here</a></p>
       </div>
     </section>
   </main>
-  <footer class="footer">
-    <div class="container footer__content">
+
+  <footer>
+    <div class="container">
       <div>
-        <a href="index.html" class="navbar__brand">JobSearch</a>
-        <p class="text-muted">IS231 Web Technology - Phase 1</p>
+        <a href="index.html" class="brand">JobSearch</a>
+        <p class="text-muted">IS231 Web Technology - Phase 1 (Project 4)</p>
       </div>
-      <ul class="footer__links">
+      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="jobs.html">Browse Jobs</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Sign Up</a></li>
         <li><a href="cover.html">Cover Page</a></li>
       </ul>
-      <p class="text-muted">&copy; 2026 JobSearch - FCAI Cairo University</p>
     </div>
   </footer>
 </body>

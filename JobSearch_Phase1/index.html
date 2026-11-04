@@ -2,192 +2,143 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home | JobSearch</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/pages/home.css">
 </head>
 <body>
   <header>
     <nav class="navbar container">
-      <a href="index.html" class="navbar__brand">JobSearch</a>
-      <input type="checkbox" id="nav-toggle" class="sr-only">
-      <label for="nav-toggle" class="navbar__toggle" aria-label="Menu">&#9776;</label>
-      <ul class="navbar__links">
-        <li><a href="index.html" aria-current="page">Home</a></li>
+      <a href="index.html" class="brand">JobSearch</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="jobs.html">Browse Jobs</a></li>
         <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="container">
-    <section class="home-hero">
-      <h1>Find Your Next Tech Job Easily</h1>
-      <p>Search open job opportunities from top companies, apply online, and track all your applications in one place.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Find Your Next Tech Job in Egypt</h1>
+      <p class="text-muted">Search software, testing, and data openings across local tech companies, or post new jobs for your team.</p>
 
-      <form action="jobs.html" method="get" role="search" class="home-search">
-        <label for="hero-search" class="form-label">Search by job title</label>
-        <div class="home-search__row">
-          <input type="search" id="hero-search" name="title" class="form-control" placeholder="e.g. Frontend Developer">
-          <button type="submit" class="btn btn-primary">Search</button>
+      <form action="jobs.html" method="get">
+        <div class="form-group">
+          <label for="quick-title">Quick Search by Job Title</label>
+          <div class="search-row">
+            <input type="text" id="quick-title" name="title" placeholder="e.g. Frontend Developer">
+            <button type="submit" class="btn btn-primary">Search</button>
+          </div>
         </div>
       </form>
 
-      <div class="home-hero__ctas">
-        <a href="jobs.html" class="btn btn-secondary">Browse Jobs</a>
+      <div class="actions">
+        <a href="jobs.html" class="btn btn-primary">Browse Open Jobs</a>
         <a href="signup.html" class="btn btn-outline">Post a Job</a>
       </div>
     </section>
 
+    <!-- How It Works -->
     <section class="section">
-      <div class="home-section-head">
-        <h2>How It Works</h2>
+      <h2>How It Works</h2>
+      <div class="grid-3">
+        <article class="card">
+          <h3>1. Create an Account</h3>
+          <p class="text-muted">Sign up as a job seeker to apply for openings, or register your company to publish job posts.</p>
+        </article>
+        <article class="card">
+          <h3>2. Search Openings</h3>
+          <p class="text-muted">Look up positions by job title and years of experience to find roles that fit your skills.</p>
+        </article>
+        <article class="card">
+          <h3>3. Apply Online</h3>
+          <p class="text-muted">Check full job details, send your application to open roles, and keep track of jobs you applied for.</p>
+        </article>
       </div>
-
-      <ol class="grid-3 home-steps">
-        <li class="card">
-          <h3>Create account</h3>
-          <p>Sign up as a Job Seeker to look for jobs or as a Company Admin to post new openings.</p>
-        </li>
-        <li class="card">
-          <h3>Search jobs</h3>
-          <p>Browse available postings and filter them by job title and required years of experience.</p>
-        </li>
-        <li class="card">
-          <h3>Apply</h3>
-          <p>Open the job details page, submit your application, and track it in My Applications.</p>
-        </li>
-      </ol>
     </section>
 
+    <!-- Featured Jobs -->
     <section class="section">
-      <div class="home-section-head">
-        <h2>Featured Jobs</h2>
-        <a href="jobs.html">View all jobs</a>
+      <div class="header-row">
+        <h2>Featured Open Jobs</h2>
+        <a href="jobs.html">See all jobs</a>
       </div>
 
       <div class="grid-3">
-        <article class="job-card">
-          <div class="job-card__header">
+        <article class="card job-card">
+          <div class="job-header">
             <div>
-              <h3><a href="job-details.html">Frontend Developer</a></h3>
-              <span class="text-muted">TechNova</span>
+              <span class="job-id">Job #101</span>
+              <h3>Frontend Developer</h3>
             </div>
             <span class="badge badge-open">Open</span>
           </div>
-          <div class="job-card__meta">
-            <span>18,000 EGP/month</span>
-            <span>2 yrs experience</span>
-          </div>
-          <p>Build responsive web pages using HTML and CSS and work closely with the design and product teams.</p>
-          <div class="job-card__actions">
-            <a href="job-details.html" class="btn btn-outline btn-sm">View Details</a>
-            <a href="job-details.html" class="btn btn-primary btn-sm">Apply</a>
+          <ul class="job-meta">
+            <li>TechNova</li>
+            <li>18,000 EGP/month</li>
+            <li>2 years exp.</li>
+          </ul>
+          <p class="text-muted">Build responsive web pages using semantic HTML and modern CSS for client portals.</p>
+          <div class="actions">
+            <a href="job-details.html" class="btn btn-primary btn-sm">View Details</a>
           </div>
         </article>
 
-        <article class="job-card">
-          <div class="job-card__header">
+        <article class="card job-card">
+          <div class="job-header">
             <div>
-              <h3><a href="job-details.html">Backend Developer</a></h3>
-              <span class="text-muted">CodeBridge</span>
+              <span class="job-id">Job #102</span>
+              <h3>Backend Developer</h3>
             </div>
             <span class="badge badge-open">Open</span>
           </div>
-          <div class="job-card__meta">
-            <span>22,000 EGP/month</span>
-            <span>3 yrs experience</span>
-          </div>
-          <p>Develop and maintain backend services, APIs, and database queries for web applications.</p>
-          <div class="job-card__actions">
-            <a href="job-details.html" class="btn btn-outline btn-sm">View Details</a>
-            <a href="job-details.html" class="btn btn-primary btn-sm">Apply</a>
+          <ul class="job-meta">
+            <li>CodeBridge</li>
+            <li>22,000 EGP/month</li>
+            <li>3 years exp.</li>
+          </ul>
+          <p class="text-muted">Develop REST APIs, database queries, and server-side logic for web applications.</p>
+          <div class="actions">
+            <a href="job-details.html" class="btn btn-primary btn-sm">View Details</a>
           </div>
         </article>
 
-        <article class="job-card">
-          <div class="job-card__header">
+        <article class="card job-card">
+          <div class="job-header">
             <div>
-              <h3><a href="job-details.html">UI/UX Designer</a></h3>
-              <span class="text-muted">PixelHub</span>
+              <span class="job-id">Job #103</span>
+              <h3>QA Engineer</h3>
             </div>
             <span class="badge badge-open">Open</span>
           </div>
-          <div class="job-card__meta">
-            <span>15,000 EGP/month</span>
-            <span>1 yr experience</span>
-          </div>
-          <p>Design clean user interfaces, wireframes, and prototypes for web and mobile projects.</p>
-          <div class="job-card__actions">
-            <a href="job-details.html" class="btn btn-outline btn-sm">View Details</a>
-            <a href="job-details.html" class="btn btn-primary btn-sm">Apply</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <aside class="card home-stats">
-      <div class="home-stats__numbers">
-        <div>
-          <strong>9</strong>
-          <span class="text-muted">Job postings</span>
-        </div>
-        <div>
-          <strong>4</strong>
-          <span class="text-muted">Companies</span>
-        </div>
-      </div>
-
-      <div class="home-stats__companies">
-        <span class="text-muted">Companies:</span>
-        <span class="chip">TechNova</span>
-        <span class="chip">CodeBridge</span>
-        <span class="chip">PixelHub</span>
-        <span class="chip">DataWave</span>
-      </div>
-    </aside>
-
-    <section class="section">
-      <div class="grid-2">
-        <article class="card home-cta-box">
-          <div>
-            <h2>For Job Seekers</h2>
-            <p class="text-muted">Browse open jobs, check salary and experience requirements, and apply directly.</p>
-          </div>
-          <div>
-            <a href="jobs.html" class="btn btn-primary">Browse Jobs</a>
-          </div>
-        </article>
-
-        <article class="card home-cta-box">
-          <div>
-            <h2>For Companies</h2>
-            <p class="text-muted">Create a company admin account to add new job postings and manage your listings.</p>
-          </div>
-          <div>
-            <a href="signup.html" class="btn btn-outline">Post a Job</a>
+          <ul class="job-meta">
+            <li>TechNova</li>
+            <li>14,000 EGP/month</li>
+            <li>1 year exp.</li>
+          </ul>
+          <p class="text-muted">Write test cases, run manual and automated web tests, and report defects clearly.</p>
+          <div class="actions">
+            <a href="job-details.html" class="btn btn-primary btn-sm">View Details</a>
           </div>
         </article>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer__content">
+  <footer>
+    <div class="container">
       <div>
-        <a href="index.html" class="navbar__brand">JobSearch</a>
-        <p class="text-muted">IS231 Web Technology - Phase 1</p>
+        <a href="index.html" class="brand">JobSearch</a>
+        <p class="text-muted">IS231 Web Technology - Phase 1 (Project 4)</p>
       </div>
-      <ul class="footer__links">
+      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="jobs.html">Browse Jobs</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Sign Up</a></li>
         <li><a href="cover.html">Cover Page</a></li>
       </ul>
-      <p class="text-muted">&copy; 2026 JobSearch - FCAI Cairo University</p>
     </div>
   </footer>
 </body>
